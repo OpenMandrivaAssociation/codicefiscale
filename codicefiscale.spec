@@ -14,6 +14,8 @@ Patch0:		%{name}-%{version}-desktop.patch
 Patch1:		%{name}-%{version}-install.patch
 BuildRequires:	qt4-devel 
 BuildRequires:	desktop-file-utils
+# this is being seen as the same %name...
+Conflicts:		texlive-codicefiscaleitaliano
 
 
 %description
