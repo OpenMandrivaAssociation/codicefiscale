@@ -1,0 +1,30 @@
+┌─[ symbianflo @ symbianflo ] - [ Mandrivausers.ro ] 
+└─[ MRB:aint-no-shit $]: diff -u orig-cod_fisc.pro cod_fisc.pro
+--- desktop/orig-codicefiscale.desktop  2014-10-26 15:27:05.192767910 +0100
++++ desktop/codicefiscale.desktop       2014-10-26 15:29:04.218085487 +0100
+@@ -1,22 +1,11 @@
+ [Desktop Entry]
+-Categories=Application;Office
++Categories=Office;
+ Comment[it]=Software per il calcolo del codice fiscale
+ Comment=Software per il calcolo del codice fiscale
+-Encoding=UTF-8
+-Exec=/opt/codicefiscale/codicefiscale
+-GenericName[it]=
+-GenericName=
+-Icon=/opt/codicefiscale/codicefisc.png
+-MimeType=
++Exec=codicefiscale
++Icon=codicefisc
+ Name[it]=CodiceFiscale
+ Name=CodiceFiscale
+ Name[it_IT]=CodiceFiscale
+-Path=/opt/codicefiscale
+-StartupNotify=true
+ Terminal=false
+-TerminalOptions=
+ Type=Application
+-X-DBUS-ServiceName=
+-X-DBUS-StartupType=
+-X-KDE-SubstituteUID=false
+-X-KDE-Username=

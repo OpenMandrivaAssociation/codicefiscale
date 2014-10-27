@@ -1,0 +1,27 @@
+┌─[ symbianflo @ symbianflo ] - [ Mandrivausers.ro ] 
+└─[ MRB:aint-no-shit $]: diff -u orig-cod_fisc.pro cod_fisc.pro
+--- orig-cod_fisc.pro   2014-10-27 19:58:04.390310400 +0100
++++ cod_fisc.pro        2014-10-27 20:04:00.218564841 +0100
+@@ -33,15 +33,15 @@
+ 
+ unix{
+ 
+-codicefiscale_desktop_file.path = /usr/share/applications
+-codicefiscale_desktop_file.files = desktop/*
++desktop.path = /usr/share/applications
++desktop.files = desktop/codicefiscale.desktop
+ 
+-codicefiscale_logo.path=/opt/codicefiscale
+-codicefiscale_logo.files= images/codicefisc.png
++icon_png.path = /usr/share/pixmaps
++icon_png.files= images/codicefisc.png
+ 
+-target.path = /opt/codicefiscale/
++target.path = /usr/bin
+ 
+-INSTALLS += codicefiscale_desktop_file codicefiscale_logo target
++INSTALLS += desktop icon_png target
+ }
+ RESOURCES = cod_fisc.qrc
+ RC_FILE = winicon.rc
+ 
