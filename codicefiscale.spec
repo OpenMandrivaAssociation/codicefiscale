@@ -2,16 +2,16 @@
 
 Name: 		codicefiscale
 Summary: 	The tax code in Italy is an alphanumeric code
-Version: 	1.1
+Version: 	1.2
 Release: 	1
 License: 	LGPLv3
 Group: 		Office
 URL:		https://github.com/kratos83/CodiceFiscale
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	%{name}-%{version}.tar.gz
 # desktop is a real mess.Sflo
-Patch0:		%{name}-%{version}-desktop.patch
+Patch0:		%{name}-1.1-desktop.patch
 # we don't install in /opt.Sflo
-Patch1:		%{name}-%{version}-install.patch
+Patch1:		%{name}-1.1-install.patch
 BuildRequires:	qt4-devel 
 BuildRequires:	desktop-file-utils
 # this is being seen as the same %name...
