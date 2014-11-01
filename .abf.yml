@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   codicefiscale-1.1.tar.bz2: 7327af679f467fcb35fcf43328665c10cb1ea9d6
+sources:
+  codicefiscale-1.2.tar.gz: 89a18878516d75b0eb1e971f5e421217fa257e14
