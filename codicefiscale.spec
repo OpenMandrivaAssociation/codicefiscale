@@ -2,7 +2,7 @@
 
 Name: 		codicefiscale
 Summary: 	The tax code in Italy is an alphanumeric code
-Version: 	1.2
+Version: 	1.3
 Release: 	1
 License: 	LGPLv3
 Group: 		Office
