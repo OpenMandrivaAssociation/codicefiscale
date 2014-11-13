@@ -2,18 +2,21 @@
 
 Name: 		codicefiscale
 Summary: 	The tax code in Italy is an alphanumeric code
-Version: 	1.1
+Version: 	2.0
 Release: 	1
 License: 	LGPLv3
 Group: 		Office
 URL:		https://github.com/kratos83/CodiceFiscale
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	%{name}-%{version}.tar.gz
 # desktop is a real mess.Sflo
-Patch0:		%{name}-%{version}-desktop.patch
+Patch0:		%{name}-1.1-desktop.patch
 # we don't install in /opt.Sflo
-Patch1:		%{name}-%{version}-install.patch
+Patch1:		%{name}-1.1-install.patch
+Patch2:		codicefiscale-2.0-update.patch
 BuildRequires:	qt4-devel 
 BuildRequires:	desktop-file-utils
+# this is being seen as the same %name...
+Conflicts:		texlive-codicefiscaleitaliano
 
 
 %description
@@ -36,6 +39,7 @@ the identifier is the legal Rea, even if not used by the Revenue.
 %setup -q
 %patch0 -p0 -b desktop.
 %patch1 -p0 -b install.
+%patch2 -p0 -b update.
 find . -type f -exec chmod -x {} \;
 
 %build
@@ -47,10 +51,12 @@ find . -type f -exec chmod -x {} \;
 
 desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop 
 chmod -x %{buildroot}%{_datadir}/applications/%{name}.desktop
+rm -fr %{buildroot}/opt/codicefiscale
 
 %files
-%doc licenza.txt README.md comuni.txt stati.txt
+%doc CHANGELOG README.md
 %{_bindir}/%{name}
+%{_bindir}/update
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/*.png
 

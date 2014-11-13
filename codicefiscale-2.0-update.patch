@@ -1,0 +1,13 @@
+┌─[ symbianflo @ symbianflo ] - [ Mandrivausers.ro ] 
+└─[ MRB:aint-no-shit $]: diff -u update/orig-update.pro update/update.pro
+--- update/orig-update.pro      2014-11-13 21:03:00.110024950 +0100
++++ update/update.pro   2014-11-13 21:03:28.856879515 +0100
+@@ -27,7 +27,7 @@
+ 
+ unix{
+ 
+-target.path = /opt/codicefiscale
++target.path = /usr/bin
+ 
+ INSTALLS += target
+ }
