@@ -1,7 +1,7 @@
 ┌─[ symbianflo @ symbianflo ] - [ Mandrivausers.ro ] 
-└─[ MRB:aint-no-shit $]: diff -u orig-cod_fisc.pro cod_fisc.pro
---- orig-cod_fisc.pro   2014-10-27 19:58:04.390310400 +0100
-+++ cod_fisc.pro        2014-10-27 20:04:00.218564841 +0100
+└─[ MRB:aint-no-shit $]: diff -u cod_fisc/orig-cod_fisc.pro cod_fisc/cod_fisc.pro
+--- cod_fisc/orig-cod_fisc.pro   2014-10-27 19:58:04.390310400 +0100
++++ cod_fisc/cod_fisc.pro        2014-10-27 20:04:00.218564841 +0100
 @@ -33,15 +33,15 @@
  
  unix{
