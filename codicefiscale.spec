@@ -13,6 +13,7 @@ Patch0:		%{name}-1.1-desktop.patch
 # we don't install in /opt.Sflo
 Patch1:		%{name}-1.1-install.patch
 Patch2:		codicefiscale-2.0-update.patch
+BuildRequires:	make
 BuildRequires:	qt4-devel 
 BuildRequires:	desktop-file-utils
 # this is being seen as the same %name...
