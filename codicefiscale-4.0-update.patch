@@ -1,0 +1,22 @@
+--- a/update/update.pro
++++ b/update/update.pro
+@@ -36,7 +36,7 @@
+ 
+ unix{
+ 
+-target.path = /opt/codicefiscale
++target.path = /usr/bin
+ 
+ INSTALLS += target
+ }
+--- a/update/CMakeLists.txt
++++ b/update/CMakeLists.txt
+@@ -85,7 +85,7 @@
+ elseif(APPLE)
+     INSTALL( TARGETS update BUNDLE DESTINATION ${CMAKE_INSTALL_PREFIX}/codicefiscale)
+ else()
+-     INSTALL( TARGETS update RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/codicefiscale)
++     INSTALL( TARGETS update RUNTIME DESTINATION /usr/bin)
+ endif()
+ 
+ # set up apple vars before traversing into data/scripts

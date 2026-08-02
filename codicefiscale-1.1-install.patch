@@ -1,27 +1,13 @@
-┌─[ symbianflo @ symbianflo ] - [ Mandrivausers.ro ] 
-└─[ MRB:aint-no-shit $]: diff -u cod_fisc/orig-cod_fisc.pro cod_fisc/cod_fisc.pro
---- cod_fisc/orig-cod_fisc.pro   2014-10-27 19:58:04.390310400 +0100
-+++ cod_fisc/cod_fisc.pro        2014-10-27 20:04:00.218564841 +0100
-@@ -33,15 +33,15 @@
- 
- unix{
- 
--codicefiscale_desktop_file.path = /usr/share/applications
--codicefiscale_desktop_file.files = desktop/*
-+desktop.path = /usr/share/applications
-+desktop.files = desktop/codicefiscale.desktop
- 
--codicefiscale_logo.path=/opt/codicefiscale
--codicefiscale_logo.files= images/codicefisc.png
-+icon_png.path = /usr/share/pixmaps
-+icon_png.files= images/codicefisc.png
- 
--target.path = /opt/codicefiscale/
-+target.path = /usr/bin
- 
--INSTALLS += codicefiscale_desktop_file codicefiscale_logo target
-+INSTALLS += desktop icon_png target
- }
- RESOURCES = cod_fisc.qrc
- RC_FILE = winicon.rc
- 
+--- a/cod_fisc/CMakeLists.txt
++++ b/cod_fisc/CMakeLists.txt
+@@ -196,8 +196,8 @@
+ 		COMMAND ${CMAKE_COMMAND} -E copy "../cod_fisc/codicefiscale.db" "${CODFISC}")
+ add_dependencies(codicefiscale codifiscplugindir)
+ ELSE()
+-    INSTALL( TARGETS codicefiscale RUNTIME DESTINATION /opt/codicefiscale)
+-    INSTALL( FILES "images/codicefiscale.png" DESTINATION /opt/codicefiscale)
++    INSTALL( TARGETS codicefiscale RUNTIME DESTINATION /usr/bin)
++    INSTALL( FILES "images/codicefisc.png" DESTINATION /usr/share/pixmaps)
+     INSTALL( FILES "desktop/codicefiscale.desktop" DESTINATION /usr/share/applications )
+     get_target_property(CODFISC codicefiscale LOCATION)
+ get_filename_component(CODFISC ${CODFISC} PATH)
